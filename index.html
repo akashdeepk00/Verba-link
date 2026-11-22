@@ -700,7 +700,7 @@
 
     async function initCloudBackend() {
       try {
-        if (!firebaseConfig || !firebaseConfig.apiKey || firebaseConfig.apiKey === 'AIzaSyDvHaaNUXz_1JqzKO2TlU-gAqNKF-0pOdw') {
+        if (!firebaseConfig || !firebaseConfig.apiKey || firebaseConfig.apiKey === 'YOUR_API_KEY') {
           setCloudStatus('error', 'Configure Firebase');
           showToast('Add your Firebase config in index.html to enable cloud sync', 'alert-circle');
           return;
