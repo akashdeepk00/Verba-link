@@ -809,7 +809,27 @@
           return;
         }
 
-        const firebaseConfig = JSON.parse(__firebase_config);
+        // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDvHaaNUXz_1JqzKO2TlU-gAqNKF-0pOdw",
+  authDomain: "verbalink-c8859.firebaseapp.com",
+  projectId: "verbalink-c8859",
+  storageBucket: "verbalink-c8859.firebasestorage.app",
+  messagingSenderId: "831802145738",
+  appId: "1:831802145738:web:094ceb4752f38a02502d33",
+  measurementId: "G-TZFE2D0JHQ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
         const app = initializeApp(firebaseConfig);
         auth = getAuth(app);
         db = getFirestore(app);
